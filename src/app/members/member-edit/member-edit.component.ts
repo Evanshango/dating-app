@@ -1,4 +1,4 @@
-import {Component, HostListener, OnInit, ViewChild} from '@angular/core';
+import {Component, HostListener, Input, OnInit, ViewChild} from '@angular/core';
 import {User} from '../../_models/user';
 import {ActivatedRoute} from '@angular/router';
 import {AlertifyService} from '../../_services/alertify.service';
