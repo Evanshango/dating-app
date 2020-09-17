@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {environment} from '../../environments/environment';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {User} from '../_models/user';
 
@@ -23,5 +23,13 @@ export class UserService {
 
   updateUser(id: number, user: User){
     return this.http.patch(`${this.baseUrl}/users/${id}`, user)
+  }
+
+  setMainPhoto(userId: number, id: number){
+    return this.http.patch(`${this.baseUrl}/users/${userId}/photos/${id}/set/main`, {});
+  }
+
+  deletePhoto(userId: number, id: number){
+    return this.http.delete(`${this.baseUrl}/users/${userId}/photos/${id}`)
   }
 }

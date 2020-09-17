@@ -8,12 +8,12 @@ export class AlertifyService {
 
   constructor() { }
 
-  confirm(message: string, okCallback: () => any){
+  confirm(message: string, title: string, okCallback: () => any){
     alertify.confirm(message, (e: any) => {
       if (e){
         okCallback()
       } else {}
-    })
+    }).setHeader(title)
   }
 
   success(message: string){
