@@ -35,6 +35,7 @@ import {BsDatepickerModule} from 'ngx-bootstrap/datepicker';
 import {TimeagoModule} from 'ngx-timeago';
 import {PaginationModule} from 'ngx-bootstrap/pagination';
 import {ButtonsModule} from 'ngx-bootstrap/buttons';
+import {ListsResolver} from './_resolvers/lists.resolver';
 
 export function tokenGetter() {
   return localStorage.getItem('meet_up_token');
@@ -86,6 +87,7 @@ export function tokenGetter() {
     MemberDetailResolver,
     MemberListResolver,
     MemberEditResolver,
+    ListsResolver,
     PreventUnsavedChanges
   ],
   bootstrap: [AppComponent]
