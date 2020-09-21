@@ -36,6 +36,8 @@ import {TimeagoModule} from 'ngx-timeago';
 import {PaginationModule} from 'ngx-bootstrap/pagination';
 import {ButtonsModule} from 'ngx-bootstrap/buttons';
 import {ListsResolver} from './_resolvers/lists.resolver';
+import {MessagesResolver} from './_resolvers/messages.resolver';
+import { MemberMessagesComponent } from './members/member-messages/member-messages.component';
 
 export function tokenGetter() {
   return localStorage.getItem('meet_up_token');
@@ -53,7 +55,8 @@ export function tokenGetter() {
     MemberCardComponent,
     MemberDetailComponent,
     MemberEditComponent,
-    PhotoEditorComponent
+    PhotoEditorComponent,
+    MemberMessagesComponent
   ],
   imports: [
     BrowserModule,
@@ -87,6 +90,7 @@ export function tokenGetter() {
     MemberDetailResolver,
     MemberListResolver,
     MemberEditResolver,
+    MessagesResolver,
     ListsResolver,
     PreventUnsavedChanges
   ],
